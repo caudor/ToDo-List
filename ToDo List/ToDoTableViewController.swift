@@ -41,8 +41,13 @@ class ToDoTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) ->
         UITableViewCell{
             let cell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath)
+            let toDo = toDos[indexPath.row]
+            if toDo.important{
+                cell.textLabel?.text = "❗️" + toDo.name
+            } else {
+                cell.textLabel?.text = toDo.name
+            }
             
-            cell.textLabel?.text = "Hello"
             return cell
             
     }
