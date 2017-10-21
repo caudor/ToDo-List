@@ -22,11 +22,12 @@ class CompleteToDoViewController: UIViewController {
     }
 
     @IBAction func completeTapped(_ sender: Any) {
-        
+        var index = 0
         for toDo in previousVC.toDos{
             if toDo.name == selectedToDo.name{
-                print("We found it-- \(toDo.name)")
+                print("We found it-- \(toDo.name) at index \(index)")
             }
+            index += 1
         }
     }
     
