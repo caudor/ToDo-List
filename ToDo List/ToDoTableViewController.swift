@@ -60,6 +60,15 @@ class ToDoTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddToDoViewController{
         addVC.previousVC = self
         }
+        
+        if let completeVC = segue.destination as? CompleteToDoViewController{
+            if let toDo = sender as? ToDo{
+                completeVC.selectedToDo = toDo
+                completeVC.previousVC = self
+            }
+            
+            
+        }
     }
     
 }

@@ -62,7 +62,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-B6-z9C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwp-B6-z9C">
                                 <rect key="frame" x="139" y="272" width="97" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Complete"/>
@@ -76,7 +76,7 @@
                             <constraint firstItem="I9C-Yg-uIq" firstAttribute="top" secondItem="NF8-wl-RKN" secondAttribute="top" constant="75" id="M0K-MP-acM"/>
                             <constraint firstItem="I9C-Yg-uIq" firstAttribute="leading" secondItem="NF8-wl-RKN" secondAttribute="leading" constant="5" id="O2E-9h-Rza"/>
                             <constraint firstItem="NF8-wl-RKN" firstAttribute="trailing" secondItem="I9C-Yg-uIq" secondAttribute="trailing" constant="5" id="ZNj-Vq-mly"/>
-                            <constraint firstItem="Fwp-B6-z9C" firstAttribute="centerX" secondItem="TWO-dk-5LV" secondAttribute="centerX" id="apo-Zx-FIU"/>
+                            <constraint firstItem="Fwp-B6-z9C" firstAttribute="top" secondItem="I9C-Yg-uIq" secondAttribute="bottom" constant="90" id="fXD-yq-MEU"/>
                             <constraint firstItem="I9C-Yg-uIq" firstAttribute="centerX" secondItem="TWO-dk-5LV" secondAttribute="centerX" id="id0-cz-byx"/>
                             <constraint firstItem="Fwp-B6-z9C" firstAttribute="centerX" secondItem="TWO-dk-5LV" secondAttribute="centerX" id="nks-D4-h9i"/>
                         </constraints>
