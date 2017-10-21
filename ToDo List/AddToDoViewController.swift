@@ -22,6 +22,7 @@ class AddToDoViewController: UIViewController {
     }
 
     @IBAction func addTapped(_ sender: Any) {
+        
         let toDo = ToDo()
         
         /*this is bad practice. What is proper way to unwrap?
@@ -40,7 +41,7 @@ class AddToDoViewController: UIViewController {
             navigationController?.popViewController(animated: true)
             // Push means go forward, Pop means to back to previous view controller
         }
-        
+     
         
     }
 }
