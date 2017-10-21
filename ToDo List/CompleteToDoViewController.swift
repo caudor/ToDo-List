@@ -25,7 +25,10 @@ class CompleteToDoViewController: UIViewController {
         var index = 0
         for toDo in previousVC.toDos{
             if toDo.name == selectedToDo.name{
-                print("We found it-- \(toDo.name) at index \(index)")
+                previousVC.toDos.remove(at: index)
+                previousVC.tableView.reloadData()
+                navigationController?.popViewController(animated: true)
+                break
             }
             index += 1
         }
