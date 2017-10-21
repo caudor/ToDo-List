@@ -29,5 +29,9 @@ class AddToDoViewController: UIViewController {
         previousVC.toDos.append(toDo)
         //Now table view needs to know there is an update
         previousVC.tableView.reloadData()
+        
+        //Go back to TableViewController
+        navigationController?.popViewController(animated: true)
+        // Push means go forward, Pop means to back to previous view controller
     }
 }
