@@ -23,15 +23,24 @@ class AddToDoViewController: UIViewController {
 
     @IBAction func addTapped(_ sender: Any) {
         let toDo = ToDo()
-        toDo.name = titleTextField.text!
-        toDo.important = importantSwitch.isOn
         
-        previousVC.toDos.append(toDo)
-        //Now table view needs to know there is an update
-        previousVC.tableView.reloadData()
+        /*this is bad practice. What is proper way to unwrap?
+        toDo.name = titleTextField!*/
+        // better
+        if let titleText = titleTextField.text{
+            toDo.name = titleText
+            toDo.important = importantSwitch.isOn
+            
+            previousVC.toDos.append(toDo)
+      
+            //Now table view needs to know there is an update
+            previousVC.tableView.reloadData()
+            
+            //Go back to TableViewController
+            navigationController?.popViewController(animated: true)
+            // Push means go forward, Pop means to back to previous view controller
+        }
         
-        //Go back to TableViewController
-        navigationController?.popViewController(animated: true)
-        // Push means go forward, Pop means to back to previous view controller
+        
     }
 }
