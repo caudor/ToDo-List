@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="193" y="210"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="hw1-Bv-OyO">
             <objects>
-                <viewController id="UD2-5n-otx" sceneMemberID="viewController">
+                <viewController id="UD2-5n-otx" customClass="AddToDoViewController" customModule="ToDo_List" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8U2-O7-XZr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,12 +71,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwX-j4-lgl">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uwX-j4-lgl">
                                 <rect key="frame" x="163" y="234" width="51" height="31"/>
                             </switch>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5TD-da-0sK">
                                 <rect key="frame" x="172" y="318" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="UD2-5n-otx" eventType="touchUpInside" id="5N9-nJ-3hV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,6 +99,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Wzz-xR-tdc"/>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="uwX-j4-lgl" id="K3B-eW-ghq"/>
+                        <outlet property="titleTextField" destination="e5Y-ZB-6Ro" id="70t-BN-Nxq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DNy-ad-ipM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
